@@ -1,0 +1,31 @@
+{
+  "name": "rooter",
+  "version": "0.1.0",
+  "description": "Dumb router.",
+  "keywords": [
+    "router",
+    "history",
+    "pushState"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/yneves/rooter",
+  "author": {
+    "name": "Yuri Neves Silveira",
+    "url": "http://yneves.com/",
+    "email": "npm@yneves.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yneves/rooter.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "mocha": ">=1.0.0"
+  },
+  "dependencies": {
+    "bauer-factory": "^2.0.4"
+  },
+  "main": "lib/router.js"
+}
