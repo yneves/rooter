@@ -1,6 +1,6 @@
 {
   "name": "rooter",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Dumb router.",
   "keywords": [
     "router",
@@ -12,7 +12,7 @@
   "author": {
     "name": "Yuri Neves Silveira",
     "url": "http://yneves.com/",
-    "email": "npm@yneves.com"
+    "email": "yurinevessilveira@gmail.com"
   },
   "repository": {
     "type": "git",
