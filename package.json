@@ -1,6 +1,6 @@
 {
   "name": "rooter",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Dumb router.",
   "keywords": [
     "router",
@@ -25,7 +25,9 @@
     "mocha": "^2.3.4"
   },
   "dependencies": {
-    "bauer-factory": "^2.0.5"
+    "bauer-factory": "^2.0.5",
+    "jsdom": "^7.2.2",
+    "mocha-jsdom": "^1.0.0"
   },
   "main": "lib/router.js"
 }
