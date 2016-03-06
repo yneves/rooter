@@ -59,6 +59,18 @@ describe("Router",function() {
     assert.deepEqual(router.getRouteParams(), { id: "a" });
   });
   
+  it("it should return undefined query if not present in url", function() {
+    var router = new Router();
+    var parsed = router.parse("http://localhost");
+    assert.strictEqual(parsed.query, undefined);
+    router.setRoute({
+      "/home": function() { return "home"; },
+      "/login": function() { return "login"; },
+    });
+    var route = router.findRoute("/login");
+    assert.strictEqual(route.query, undefined);
+  });
+  
 });
 
 // - -------------------------------------------------------------------- - //
