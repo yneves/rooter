@@ -89,6 +89,28 @@ describe('Router', function () {
     assert.ok(errorHandled);
   });
 
+  it('should validate route and redirect', function () {
+    var router = new Router();
+    var calledValidate = false;
+    router.setRoute({
+      '/valid': {
+        validate: function () { return true },
+        handler: function () {}
+      },
+      '/invalid': {
+        redirect: '/valid',
+        validate: function () {
+          calledValidate = true;
+          return false;
+        },
+        handler: function () {}
+      }
+    });
+    router.navigateSync('/invalid');
+    assert.strictEqual(router.isRouteActive('/valid'), true);
+    assert.ok(calledValidate);
+  });
+
 });
 
 // - -------------------------------------------------------------------- - //
